@@ -26,7 +26,7 @@ The connectivity in linear layers __doesn't always make sense__.
 - Can we induce a *bias* in the design of a neural network layer to reflect this?
 
 ### Idea 1: receptive Fields
-![M2L05_02](imgs/M2L05_02.png)
+![M2L05_02](imgs/M2L05_02.png) <br>
 *Do we need to learn location specific features?*
 
 Each node only received input from *__K_1 x K_2__* window (image patch)
@@ -39,6 +39,7 @@ Each node only received input from *__K_1 x K_2__* window (image patch)
 
 ### Idea 2: Shared Weights
 ![M2L05_03](imgs/M2L05_03.png)
+
 Nodes in different locations can __share__ features
 - No reason to think same feature (e.g. edge pattern) can't appear elsewhere
 - Use same weights/parameters in computation graph __(shared weights)__
@@ -55,7 +56,7 @@ We can learn __many__ such features for this one layer
 - __Parameters__: *__(K1 x K_2 + 1)\*M__* where *__M__* is the number of features we want ot learn
 
 ### Convolution
-![M2L05_05](imgs/M2L05_05.png)
+![M2L05_05](imgs/M2L05_05.png)  <br>
 *Visual comparison of convolution and cross-correlation.*
 
 This operation is __extremely common__ in electrical/computer engineering!
@@ -122,27 +123,32 @@ __Why bother__ with this and not just say it's a linear layer with small recepti
 
 ### Valid Convolution
 ![M2L05_14](imgs/M2L05_14.png)
+
 __Output size__ of vanilla vonvolution operation is *__(H - k_1 + 1) x (W - k_2 + 1)__*
 - This is called a __"valide" convolution__ and only applies kernel within image
 
 ### Adding Padding
 ![M2L05_15](imgs/M2L05_15.png)
+
 We can __pad the images__ to make the output the same size:
 - Zeros, mirrored image, etc.
 - Note padding often refers to pixels added to __one size (P = 1 here)__
 
 ### Stride
 ![M2L05_16](imgs/M2L05_16.png)
+
 We can move the filter along the image using larger steps __(stride)__
 - This can protentially result in __loss of information__
 - Can be used for __dimentionality reduction__ (not recommended)
 
 ### Invalide Stride
 ![M2L05_17](imgs/M2L05_17.png)
+
 Stide can result in __skipped pixels__, e.g. stride of 3 for 5x5 input
 
 ### Multi-Channel Inputs
 ![M2L05_18](imgs/M2L05_18.png)
+
 We have shown inputs as a __one-channel image__ but in reality they have three channels (red, green, blue)
 - In such cases, we have __3-channel kernels__!
 
@@ -155,6 +161,7 @@ Similar to before, we perform __element-wise multiplication__ between kernel and
 
 ### Multiple Kernels - Number of Parameters
 ![M2L05_19](imgs/M2L05_19.png)
+
 We can have __multiple kernels per layer__
 - Number of channels in output is equal to number of kernels
 - Number of parameters with N filters is: *__N \* (k_1 \* k_2 \* 3 + 1)__*
