@@ -232,7 +232,7 @@ Typically __normalization methods__ apply:
 
 ![img](imgs/M1L03_16.png)
 
-### Learnable Sacling and Offset
+### Learnable Scaling and Offset
 - We can give the model flexibility throught __learnable parameters *𝜸* (scale) and *𝜷* (shift)__
 - Network can learn to __not normalize__ if necessary!
 - This layer is called a __Batch Normalization (BN) layer__
