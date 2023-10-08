@@ -26,7 +26,7 @@ __Conv layers:__ For each kernel, scale values from 0-255 and visualize
 
 We can also produce __visualization output (aka activation/filter) maps__
 
-*There are __larger__ early in the network*
+*They are __larger__ early in the network*
 
 ![img](imgs/M2L07_04.png)
 
