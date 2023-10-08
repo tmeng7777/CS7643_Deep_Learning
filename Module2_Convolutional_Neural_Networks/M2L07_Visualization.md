@@ -198,4 +198,178 @@ __Guided Grad-CAM__
 - Selfvaraju et al., Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization, 2016.
 
 
+## Optimizing the Input Images
+
+### Optimizing the Image
+
+__Idea:__ Since we have the gradient of scores w.r.t. inputs, can we *optimize* the image itself to maximize the score?
+
+__Why?__
+- Generate images from scratch!
+- Adversarial examples
+
+![img](imgs/M2L07_25.png)
+
+### Gradient Ascent on the Scores
+
+We can perform __gradient ascent__ on image
+- Start from random/zero image
+- Use scores to avoid minimizing other class scores instead
+
+Often need __regularization term__ to induce statistics of natural imagery
+- E.g. small pixel values, spatial smoothness
+
+![img](imgs/M2L07_26.png)
+
+*More info in Q&A: __How is Gradient Ascent done?__*
+
+*More info in Q&A: __How is Gradient Ascent used in image optimization?__*
+
+__Example Images__
+
+![img](imgs/M2L07_27.png)
+![img](imgs/M2L07_28.png)
+
+Can improve results with __various tricks__:
+- Clipping of small values & gradients
+- Gaussian blurring
+
+__Improved Results__
+
+![img](imgs/M2L07_29.png)
+
+### Summary
+- We can optimize the input image to __generate__ examples to increase class scores or activations
+- This can show us a great deal about what examples (not in the training set) __activate the network__
+
+
+### References and Links:
+
+- Simonyan et al., “Deep Inside Convolutional Networks: Visualising Image Classification Models and Saliency Maps”, 2013
+- Yosinski et al., “Understanding Neural Networks Through Deep Visualization”, 2015
+
+## Testing Robustness
+
+### Gradient Ascent on the Scores
+
+- We can perform __gradient ascent__ on image
+- Rather than start from zero image, why not real image?
+- And why not optimize the score of an __arbitrary__ (incorrect!) class?
+
+*__Surprising result__: You need very small amount of pixel changes to make the network confidently wrong!*
+
+
+![img](imgs/M2L07_30.png)
+
+### Example of Adversarial Noise
+
+__Note this problem is not specific to deep learning!__
+- Other methods also suffer from it
+- Can show how __linearity__ (even at the end) can bring this about
+	- Can add many small values that add up in right direction
+
+![img](imgs/M2L07_31.png)
+
+### Variations of Attacks
+
+![img](imgs/M2L07_32.png)
+
+*More info in Q&A: __What are white and black box attacks of CNN?__*
+
+*More info in Q&A: __What are some common types of attacks on CNN? Include references.__*
+
+### Summary of adversarial Attacks/Defenses
+
+Similar to other security-related areas, it's an active __cat-and-mouse game__
+
+__Several defenses such as:__
+- Training with adversarial examples
+- Perturbations, noise, or reencoding of inputs
+
+There are __not universal methods__  that are robust to all types of attacks
+
+### Other Forms of Robustness Testing
+
+![img](imgs/M2L07_33.png)
+
+### Analyzing Bias
+
+We can try to undrstand the __biases of CNNs__
+- Can compare to those of humans
+
+__Example: Shape v.s. Texture Bias__
+
+![img](imgs/M2L07_34.png)
+![img](imgs/M2L07_35.png)
+
+### Summary
+- Various ways to test the __robustness__ and __biases__ of neural networks
+- Adversarial examples have __implications__ for understanding and trusting them
+- Exploring the __gains of different architectures__ in terms of robustness and biases can also be used to understand what has been learned
+
+### References and Links:
+- Simonyan et al., “Deep Inside Convolutional Networks: Visualising Image Classification Models and Saliency Maps”, 2013
+- Goodfellow et al., “Explaining and Harnessing Adversarial Examples”, 2015
+- Su et al., “One Pixel Attack for Fooling Deep Neural Networks”, 2019.
+- Chakraborty et al., Adversarial Attacks and Defences: A Survey, 2018
+- Hendrycks & Dietterich, “Benchmarking Neural Network Robustness to Common Corruptions and Perturbations”, 2019.
+- Geirhos, “ImageNet-trained CNNs are biased towards texture; increasing shape bias improves accuracy and robustness”, 2018.
+
+## Style Transfer
+
+### Generating Images with Content
+
+- We can generate images throught backprop
+	- Regularization can be used to ensure we match image statistics
+- __Idea__: What if we want to preserve the content of the image?
+	- Match features at different layers!
+	- We can have a loss for this
+
+![img](imgs/M2L07_36.png)
+
+__Matching Features to Replicate Content__
+
+![img](imgs/M2L07_37.png)
+
+__Multiple Content Losses__
+
+- How do we deal with multiple losses?
+	- Remember, backwards edges going to same node *summed*
+- We can have this content loss at many different layers and sum them too!
+
+![img](imgs/M2L07_38.png)
+
+### Replicating Content and Style
+
+- __Idea__: Can we have the *content* of one image and *tesxture* (style) of another image?
+	- __Yes!__
+
+![img](imgs/M2L07_39.png)	
+
+### Representing Texture
+- How do we represent similarity in terms of textures?
+- Long history in image processing!
+	- Key ideas revolve around summary *statistics*
+	- Should ideally remove most spatial information
+- Deep learning variant: Feature correlations!
+	- Called a __Gram Matrix__
+
+__Gram Matrices__
+
+![img](imgs/M2L07_40.png)	
+
+*More info in Q&A: __In the context of CNN, what is a Gram Matrix used for? How is it calculated? Include references.__*
+
+__Examples__
+
+![img](imgs/M2L07_41.png)	
+![img](imgs/M2L07_42.png)	
+
+## Summary
+- Generating images throught optimization is a powerful concept!
+- Besides fun and art, methods such as stylization also useful for understanding what the network has learned
+- Also useful for other things such as data augmentation
+
+
+
 
