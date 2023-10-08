@@ -247,8 +247,12 @@ __But it doesn't always work that well!__
 
 ### Effectiveness of More Data
 
+*The curve is still linear - more data will continue to help. We haven't reached the peak.*
 ![img](imgs/M2L06_41.png)
 
+### Dealing with Low-Labeled Situations
+
+![img](imgs/M2L06_42.png)
 
 
 
