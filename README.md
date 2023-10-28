@@ -31,8 +31,29 @@
 - [Math Notes](x_math/MATH_Q&A.md)
 - [Canvas](https://gatech.instructure.com/courses/346568)
 - [Ed](https://edstem.org/us/courses/41219/discussion/)
+- [Landmark Papers in Machine Learning](https://github.com/daturkel/learning-papers)
+- [Top Machine Learning Papers to Read in 2023](https://www.kdnuggets.com/2023/03/top-machine-learning-papers-read-2023.html)
 
 ## Textbooks
 - [Deep Learning (Ian Goodfellow and Joshua Bengio and Aaron Courville)](https://www.deeplearningbook.org/)
 
-## References
+## Seminars
+
+|      Topic      |     Platform    |       Title      |
+| --------------- | --------------- | --------------- |
+| Protein | YouTube | [RFDiffusion: Accurate protein design using structure prediction and diffusion generative models](https://www.youtube.com/watch?v=wIHwHDt2NoI) |
+| Protein | YouTube | [ML for protein engineering seminar series](https://www.youtube.com/@mlforproteinengineeringsem6420/featured) |
+｜ Protein | YouTube | [AlphaFold Tutorial](https://youtu.be/GQH-zWUylPY?si=txYQPXHgyMl-AmSm)
+
+
+
+
+
+
+
+
+
+
+
+
+
