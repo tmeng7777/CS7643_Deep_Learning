@@ -50,37 +50,3 @@ There are several types of matrix products, each serving different purposes and 
 *[From: ShareTechnote](https://www.sharetechnote.com/html/Handbook_EngMath_Matrix_InnerProduct.html)*
    
 These are some of the most common matrix products, each with different properties and applications in various fields such as linear algebra, computer graphics, and machine learning.
-
-## 3. What is element wise matrix multiplication called?
-Element-wise matrix multiplication is called the Hadamard product or Schur product. In this operation, each element of the first matrix is multiplied by the corresponding element of the second matrix, resulting in a new matrix with the same dimensions as the input matrices.  
-   
-For example, given two matrices A and B:  
-   
-```  
-A = | a11 a12 |  
-    | a21 a22 |  
-   
-B = | b11 b12 |  
-    | b21 b22 |  
-```  
-   
-The Hadamard product (denoted by the symbol ⊙) is computed as follows:  
-   
-```  
-A ⊙ B = | a11 * b11  a12 * b12 |  
-        | a21 * b21  a22 * b22 |  
-```  
-   
-In Python, you can perform element-wise matrix multiplication using NumPy:  
-   
-```python  
-import numpy as np  
-   
-A = np.array([[1, 2], [3, 4]])  
-B = np.array([[5, 6], [7, 8]])  
-   
-# Hadamard product  
-C = A * B  
-```  
-   
-The Hadamard product is different from the matrix multiplication (dot product), where the elements of the rows of the first matrix are multiplied by the corresponding elements of the columns of the second matrix and then summed to produce the resulting matrix.
