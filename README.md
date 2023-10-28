@@ -28,11 +28,7 @@
 - [Lesson19: Generative Models](Module4_Advanced_Topics/M4L19_Generative_Models.md) [(Q&A)](Module4_Advanced_Topics/M4L19_Generative_Models_Q&A.md)
 
 ## Resources
-
-
-
-
-
+- [Math Notes](x_math/MATH_Q&A.md)
 - [Canvas](https://gatech.instructure.com/courses/346568)
 - [Ed](https://edstem.org/us/courses/41219/discussion/)
 
