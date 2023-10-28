@@ -20,6 +20,7 @@
 - [Lesson12: Language Models](Module3_Structured_Neural_Representations/M3L12_Language_Models.md) [(Q&A)](Module3_Structured_Neural_Representations/M3L12_Language_Models_Q&A.md)
 - [Lesson13: Embeddings](Module3_Structured_Neural_Representations/M3L13_Embeddings.md) [(Q&A)](Module3_Structured_Neural_Representations/M3L13_Embeddings_Q&A.md)
 - [Lesson14: Neural Attention Models](Module3_Structured_Neural_Representations/M3L14_Neural_Attention_Models.md) [(Q&A)](Module3_Structured_Neural_Representations/M3L14_Neural_Attention_Models_Q&A.md)
+- [Lesson14: Guest Lecture Attention Transformers BERT and ViLBERT](Module3_Structured_Neural_Representations/M3L14_Guest_Lecture_Attention_Transformers_BERT_and_ViLBERT.md) [(Q&A)](Module3_Structured_Neural_Representations/M3L14_Guest_Lecture_Attention_Transformers_BERT_and_ViLBERT_Q&A.md)
 - [Lesson15: Neural Machine Translation](Module3_Structured_Neural_Representations/M3L15_Neural_Machine_Translation.md) [(Q&A)](Module3_Structured_Neural_Representations/M3L15_Neural_Machine_Translation_Q&A.md)
 - [Lesson16: Advanced Topics Translation at Facebook and Automated Speech Recognition (ASR)](Module3_Structured_Neural_Representations/M3L16_Advanced_Topics_Translation_at_Facebook_and_Automated_Speech_Recognition_(ASR).md) [(Q&A)](Module3_Structured_Neural_Representations/M3L16_Advanced_Topics_Translation_at_Facebook_and_Automated_Speech_Recognition_(ASR)_Q&A.md)
 #### [Module4: Advanced Topics](Module4_Advanced_Topics/M4Intro_Advanced_Topics.md) [(Q&A)](Module4_Advanced_Topics/M4Intro_Advanced_Topics_Q&A.md)
@@ -28,6 +29,7 @@
 - [Lesson19: Generative Models](Module4_Advanced_Topics/M4L19_Generative_Models.md) [(Q&A)](Module4_Advanced_Topics/M4L19_Generative_Models_Q&A.md)
 
 ## Resources
+
 - [Math Notes](x_math/MATH_Q&A.md)
 - [Canvas](https://gatech.instructure.com/courses/346568)
 - [Ed](https://edstem.org/us/courses/41219/discussion/)
